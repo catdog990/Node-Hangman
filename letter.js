@@ -2,12 +2,14 @@ var welp = require("./word.js");
 
 var letter = function (){
 
-	var wut = new welp("wut", "is", "my", "life");
+	var wut = new welp("Dwight Shrute", "Michael Scott", "Pam Beasly", "Jim Halpert");
+	
+	console.log(wut.wut.split(""));
+	// console.log(wut.is.split(""));
+	// console.log(wut.my.split(""));
+	// console.log(wut.life.split(""));
 
-	console.log(wut.words.split(""));
-
-	// var when = "Oh Hey Whats New?";
-	// var wut = when.split("");
+	
 
 };
 
