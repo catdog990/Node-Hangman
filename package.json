@@ -1,0 +1,23 @@
+{
+  "name": "node-hangman",
+  "version": "1.0.0",
+  "description": "Hangman in Node ",
+  "main": "main.js",
+  "dependencies": {
+    "inquirer": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catdog990/Node-Hangman.git"
+  },
+  "author": "Osman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catdog990/Node-Hangman/issues"
+  },
+  "homepage": "https://github.com/catdog990/Node-Hangman#readme"
+}
