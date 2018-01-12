@@ -11,18 +11,24 @@ function startGame(){
 		lettersGuessed = [];
 	};
 
-	guessesLeft = 10;
+	if(guessesLeft < 10){
+		guessesLeft = 10;
+	};
 
 	inquirer.prompt([{
 		name:"start",
-		type:"input",//This might need to be changed to "confirm", just testing this out//
+		type:"input",
 		message:"Want to Play a Game?"
 	}]).then(function(response){
 		if(response.start){
-
+			nextWord()// reference to the ghasper nextWord function//
 		};
 	});
 
+
+function nextWord{
+	var why = for(var i = 0;i < wut.length; i++)
+};
 
 };
 
@@ -31,7 +37,7 @@ function gameOver(){
 
 		inquirer.prompt([{
 			name: "play-again",
-			type: "confirm",//This might need a boolean value, instead of a "yes" or "no"
+			type: "input",
 			message: "Play Again?"
 		}]).then(function(response){
 			if(response.play-again){
@@ -44,4 +50,4 @@ function gameOver(){
 
 		
 	};
-};
+	};
