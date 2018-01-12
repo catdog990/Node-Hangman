@@ -22,11 +22,18 @@ function startGame(){
 		choices:["YES", "NO"]
 	}]).then(function(response){
 		if(response.start.toUpperCase() === "YES"){
-			nextWord();
+			randWord();
 			userInput();
+			
 		};
 		if(response.start.toUpperCase() === "NO"){
 			console.log("WUTEVA!!")
+		};
+
+		if(lettersGuessed += 1){
+			userInput();
+			
+
 		};
 	});
 };
@@ -38,21 +45,43 @@ function userInput(){
 		message:"Pick Any Letter",
 	}]).then(function(response){
 		if(response){
-			// response.push(lettersGuessed);
+			
 			lettersGuessed.push(response.start);
 			console.log(lettersGuessed);
 		};
 	});
 };
 
-function nextWord(){
+function randWord(){
 	var itsNext = word[Math.floor(Math.random()* word.length)].split("");
 	console.log(itsNext);
 
 
 };
 
+// function nextWord(){
+
+
+	// inquirer.prompt([{
+	// 	name:"start",
+	// 	type:"input",
+	// 	message:"Pick Any Letter",
+	// }]).then(function(response){
+	// 	if(response){
+	// 		randWord();
+
+	// 		lettersGuessed.push(response.start);
+	// 		console.log(lettersGuessed);
+	// 	};
+
+	// });
+// };
+
+	
+
+
 startGame();
+
 
 
 
