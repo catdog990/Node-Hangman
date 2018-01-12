@@ -7,9 +7,9 @@ var guessesLeft = 10;
 function startGame(){
 	var that = this;
 
-	if(lettersGuessed.length > 0){
-		lettersGuessed = [];
-	};
+	// if(lettersGuessed.length > 0){
+	// 	lettersGuessed = [];
+	// };
 
 	if(guessesLeft < 10){
 		guessesLeft = 10;
@@ -23,6 +23,7 @@ function startGame(){
 	}]).then(function(response){
 		if(response.start.toUpperCase() === "YES"){
 			nextWord();
+			userInput();
 		};
 		if(response.start.toUpperCase() === "NO"){
 			console.log("WUTEVA!!")
@@ -30,9 +31,25 @@ function startGame(){
 	});
 };
 
+function userInput(){
+	inquirer.prompt([{
+		name:"start",
+		type:"input",
+		message:"Pick Any Letter",
+	}]).then(function(response){
+		if(response){
+			// response.push(lettersGuessed);
+			lettersGuessed.push(response.start);
+			console.log(lettersGuessed);
+		};
+	});
+};
+
 function nextWord(){
 	var itsNext = word[Math.floor(Math.random()* word.length)].split("");
 	console.log(itsNext);
+
+
 };
 
 startGame();
